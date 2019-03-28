@@ -3,20 +3,19 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import * as knobs from '@storybook/addon-knobs'
-import { action } from '@storybook/addon-actions'
+// import { action } from '@storybook/addon-actions'
 // import _ from 'lodash'
 // import faker from 'faker'
 // import dayjs from 'dayjs'
 
-import { InputNumber } from './InputNumber'
+import { NetIncome } from './NetIncome'
 
-storiesOf('Questions', module)
+storiesOf('Step', module)
   .addDecorator(knobs.withKnobs)
-  .add('InputNumber', () => {
+  .add('NetIncome', () => {
     return (
-      <InputNumber
-        value={knobs.number('value', '1225')}
-        onValueChange={action('onValueChange')}
+      <NetIncome
+        text={knobs.text('text', '')}
       />
     )
   })

@@ -9,7 +9,7 @@ export class InputNumber extends React.PureComponent {
     className: PropTypes.string,
 
     value: PropTypes.number.isRequired,
-    onChange: PropTypes.func.isRequired,
+    onValueChange: PropTypes.func.isRequired,
   };
   static defaultProps = {
   };
@@ -18,8 +18,10 @@ export class InputNumber extends React.PureComponent {
     return (
       <NumberFormat
         value={this.props.value}
+        onValueChange={this.props.onValueChange}
         thousandSeparator
         prefix={'$'}
+        allowNegative={false}
       />
     )
   }
