@@ -10,7 +10,7 @@
     "npm": "^3.0.0"
   },
   "scripts": {
-    "precommit": "npm run lint && npm run lint:scss:fix && npm run lint:scss",
+    "precommit": "npm run lint",
     "create": "hygen --prompt",
     "dev": "better-npm-run dev",
     "dev:code_spliting": "better-npm-run dev:code_spliting",
