@@ -1,0 +1,22 @@
+@import '~styles/base';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  // something
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+.button {
+  border-radius: 1rem;
+}

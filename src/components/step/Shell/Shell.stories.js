@@ -8,14 +8,17 @@ import { action } from '@storybook/addon-actions'
 // import faker from 'faker'
 // import dayjs from 'dayjs'
 
-import { Splash } from './Splash'
+import { Shell } from './Shell'
 
 storiesOf('Step', module)
   .addDecorator(knobs.withKnobs)
-  .add('Splash', () => {
+  .add('Shell', () => {
     return (
-      <Splash
+      <Shell
+        next_text={knobs.text('next_text', 'Next')}
         onNext={action('onNext')}
-      />
+      >
+        <div>Body</div>
+      </Shell>
     )
   })
