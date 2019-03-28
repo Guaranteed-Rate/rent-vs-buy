@@ -16,7 +16,7 @@ storiesOf('Questions', module)
     return (
       <InputNumber
         value={knobs.number('value', '1225')}
-        onChange={action('onChange')}
+        onValueChange={action('onValueChange')}
       />
     )
   })

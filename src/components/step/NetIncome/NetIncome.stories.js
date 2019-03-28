@@ -3,19 +3,19 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import * as knobs from '@storybook/addon-knobs'
-import { action } from '@storybook/addon-actions'
+// import { action } from '@storybook/addon-actions'
 // import _ from 'lodash'
 // import faker from 'faker'
 // import dayjs from 'dayjs'
 
-import { Splash } from './Splash'
+import { NetIncome } from './NetIncome'
 
 storiesOf('Step', module)
   .addDecorator(knobs.withKnobs)
-  .add('Splash', () => {
+  .add('NetIncome', () => {
     return (
-      <Splash
-        onNext={action('onNext')}
+      <NetIncome
+        text={knobs.text('text', '')}
       />
     )
   })
