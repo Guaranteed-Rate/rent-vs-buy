@@ -1,6 +1,10 @@
-import { configure } from '@storybook/react'
+import { configure, addParameters } from '@storybook/react'
 
 import '../src/styles/core.scss'
+
+addParameters({
+  defaultViewport: 'iPhone 6',
+})
 
 // automatically import all files ending in *.stories.js
 function loadStories () {

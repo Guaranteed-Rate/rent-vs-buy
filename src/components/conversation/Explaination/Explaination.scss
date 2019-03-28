@@ -1,0 +1,20 @@
+@import '~styles/base';
+
+.root {
+  h1 {
+    // something
+
+    em {
+      color: red;
+      font-weight: bold;
+    }
+  }
+
+  p {
+    // something
+
+    em {
+      font-weight: bold;
+    }
+  }
+}
