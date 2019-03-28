@@ -1,6 +1,30 @@
 @import 'base';
 @import '~normalize.css/normalize';
 
+@font-face {
+  font-family: 'Chronica Book';
+  font-weight: 300;
+  src: url('../styles/fonts/chronicapro-book-webfont.woff2') format('woff2'),
+    url('../styles/fonts/chronicapro-book-webfont.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Chronica Pro';
+  font-weight: 400;
+  src: url('../styles/fonts/chronicapro-regular-webfont.woff2') format('woff2'),
+    url('../styles/fonts/chronicapro-regular-webfont.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Chronica Bold';
+  font-weight: 600;
+  src: url('../styles/fonts/chronicapro-bold-webfont.woff2') format('woff2'),
+    url('../styles/fonts/chronicapro-bold-webfont.woff') format('woff');
+  font-display: swap;
+}
+
 // Some best-practice CSS that's useful for most apps
 // Just remove them if they're not what you want
 html {
