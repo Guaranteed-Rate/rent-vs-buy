@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette'); // sass-lint:disable-line no-url-protocols no-url-domains
+
+@mixin heading_font() {
+  font-family: 'Courgette', cursive;
+}
+@mixin info_font() {
+  font-family: 'Courgette', cursive;
+}
+@mixin reading_font() {
+  font-family: 'Courgette', cursive;
+}
