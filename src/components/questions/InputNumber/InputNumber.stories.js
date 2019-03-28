@@ -15,6 +15,7 @@ storiesOf('Questions', module)
   .add('InputNumber', () => {
     return (
       <InputNumber
+        prompt={knobs.text('prompt', 'total amount')}
         value={knobs.number('value', '1225')}
         onValueChange={action('onValueChange')}
       />
