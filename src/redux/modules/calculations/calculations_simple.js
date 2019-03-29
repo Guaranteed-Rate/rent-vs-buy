@@ -83,10 +83,17 @@ const home_price = createSelector(
   }
 )
 
+const lifestyle_value = createSelector(
+  simple_selectors.home_payment,
+  simple_selectors.rent_payment,
+  (home, rent) => rent - home,
+)
+
 export const selectors = {
   ...simple_selectors,
   max_home_payment,
   home_price,
+  lifestyle_value,
 }
 
 // ------------------------------------
@@ -97,10 +104,10 @@ const action_types_prefix = 'calculations/'
 const public_handlers = {
   set_net_income: (state, {payload: net_income}) => state.merge({net_income}),
   set_debt_payments: (state, {payload: debt_payments}) => state.merge({debt_payments}),
-  set_rent_payments: (state, {payload: rent_payment}) => {
+  set_rent_payment: (state, {payload: rent_payment}) => {
     state = state.merge({rent_payment})
 
-    const default_payment = Math.min(max_home_payment(state), rent_payment)
+    const default_payment = Math.min(max_home_payment({[BASE]: state}), rent_payment)
 
     return state.merge({home_payment: default_payment})
   },

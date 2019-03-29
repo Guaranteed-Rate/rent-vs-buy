@@ -15,13 +15,15 @@ export class InputNumber extends React.PureComponent {
   static defaultProps = {
   };
 
+  onValueChange = ({floatValue}) => this.props.onValueChange(floatValue)
+
   render () {
     return (
       <div styleName='root'>
         <div styleName='prompt'>{this.props.prompt}</div>
         <NumberFormat
           value={this.props.value}
-          onValueChange={this.props.onValueChange}
+          onValueChange={this.onValueChange}
           thousandSeparator
           prefix={'$'}
           allowNegative={false}

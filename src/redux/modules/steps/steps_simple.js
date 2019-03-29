@@ -31,7 +31,7 @@ const initial_state = {
       type: 'question',
       title: 'Rent Amount',
       discription: 'Enter your monthly rental payment for your current place.',
-      value_name: 'rent_payments',
+      value_name: 'rent_payment',
     },
     {
       type: 'results',

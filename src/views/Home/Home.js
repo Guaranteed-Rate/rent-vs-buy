@@ -13,13 +13,28 @@ import Results from 'components/step/Results'
 
 import {
   selectors as steps_selectors,
+  actions as steps_actions,
 } from 'redux/modules/steps'
+
+import {
+  selectors as calculations_selectors,
+  actions as calculations_actions,
+} from 'redux/modules/calculations'
 
 export const selectors = grep_matching_from_object({
   current_step: steps_selectors,
+
+  net_income: calculations_selectors,
+  debt_payments: calculations_selectors,
+  rent_payment: calculations_selectors,
 })
 
 export const actions = grep_matching_from_object({
+  next_step: steps_actions,
+
+  set_net_income: calculations_actions,
+  set_debt_payments: calculations_actions,
+  set_rent_payment: calculations_actions,
 })
 
 const mapStateToProps = createStructuredSelector(selectors)
@@ -32,6 +47,15 @@ export class Home extends React.PureComponent {
       discription: PropTypes.string,
       set_name: PropTypes.string,
     }).isRequired,
+
+    next_step: PropTypes.func.isRequired,
+
+    net_income: PropTypes.number.isRequired,
+    debt_payments: PropTypes.number.isRequired,
+    rent_payment: PropTypes.number.isRequired,
+    set_net_income: PropTypes.func.isRequired,
+    set_debt_payments: PropTypes.func.isRequired,
+    set_rent_payment: PropTypes.func.isRequired,
   };
   static defaultProps = {
   };
@@ -46,13 +70,22 @@ export class Home extends React.PureComponent {
   }
 
   render_step () {
-    const current_step = this.props
+    const {current_step} = this.props
     const Step = this.get_step_component(current_step.type)
+
+    let value = {}
+    if (current_step.value_name) {
+      value = {
+        value: this.props[current_step.value_name],
+        onValueChange: this.props['set_' + current_step.value_name],
+      }
+    }
 
     return (
       <Step
         {...current_step}
-        onNext={() => {}}
+        {...value}
+        onNext={this.props.next_step}
       />
     )
   }

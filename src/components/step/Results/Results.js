@@ -20,6 +20,7 @@ export const selectors = grep_matching_from_object({
   home_payment: calculations_selectors,
   max_home_payment: calculations_selectors,
   home_price: calculations_selectors,
+  lifestyle_value: calculations_selectors,
 })
 
 export const actions = grep_matching_from_object({
@@ -65,7 +66,7 @@ export class Results extends React.PureComponent {
           <p>
             You can afford a <em>{Amount(this.props.home_price)}</em> home of you own with a monthly
             payment of <em>{Amount(this.props.home_payment)}</em> with a
-            &nbsp;<em>{Amount(this.props.lifestyle_value)}</em> lifestyle.
+            &nbsp;<em>{Amount(this.props.lifestyle_value)}</em> lifestyle change.
           </p>
         </Explaination>
         <PaymentSlider
