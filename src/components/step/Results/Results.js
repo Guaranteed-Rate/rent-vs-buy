@@ -62,8 +62,8 @@ export class Results extends React.PureComponent {
         next_text='Take the Next Step'
       >
         <Explaination>
-          <h1>Your Results</h1>
-          <p>
+          <h1 styleName='h1'>Your Results</h1>
+          <p styleName='p'>
             You can afford a <em>{Amount(this.props.home_price)}</em> home of you own with a monthly
             payment of <em>{Amount(this.props.home_payment)}</em> with a
             &nbsp;<em>{Amount(this.props.lifestyle_value)}</em> lifestyle change.

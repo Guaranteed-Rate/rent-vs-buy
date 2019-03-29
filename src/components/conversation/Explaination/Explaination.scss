@@ -1,17 +1,29 @@
 @import '~styles/base';
 
 .root {
+    font-family: "Chronica Pro";
+
   h1 {
-    // something
+    	height: 84px;
+    	width: 239px;
+    	font-size: 38px;
+    	font-weight: bold;
+      font-style: normal;
 
     em {
-      color: red;
       font-weight: bold;
+      
     }
   }
 
   p {
-    // something
+    	font-family: "Chronica Pro";
+      font-size: 22px;
+      font-weight: normal;
+      font-style:normal;
+      letter-spacing: -0.53px;
+      line-height: 28px;
+      text-align: left;
 
     em {
       font-weight: bold;
