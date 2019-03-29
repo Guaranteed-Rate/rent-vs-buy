@@ -9,17 +9,25 @@ export class PaymentSlider extends React.PureComponent {
     className: PropTypes.string,
 
     value: PropTypes.number.isRequired,
+    min: PropTypes.number.isRequired,
+    max: PropTypes.number.isRequired,
     onChange: PropTypes.func.isRequired,
   };
   static defaultProps = {
+    min: 500,
   };
+
+  onChange = ({ x }) => this.props.onChange(x)
 
   render () {
     return (
       <Slider
         axis='x'
+        xmin={this.props.min}
+        xmax={this.props.max}
+        xstep={100}
         x={this.props.value}
-        onChange={this.props.onChange}
+        onChange={this.onChange}
       />
     )
   }

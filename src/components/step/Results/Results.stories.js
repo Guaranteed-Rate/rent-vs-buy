@@ -20,7 +20,7 @@ storiesOf('Step', module)
         lifestyle_value={knobs.number('lifestyle_value', -700)}
 
         onNext={action('onNext')}
-        onPaymentChange={action('onPaymentChange')}
+        set_home_payment={action('set_home_payment')}
       />
     )
   })

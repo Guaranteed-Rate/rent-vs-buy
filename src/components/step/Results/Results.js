@@ -1,5 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+import { createStructuredSelector } from 'reselect'
+import { grep_matching_from_object } from 'helpers/redux_helpers'
 
 import './Results.scss'
 import Shell from '../Shell'
@@ -7,6 +10,23 @@ import Explaination from 'components/conversation/Explaination'
 import PaymentSlider from 'components/tradeoffs/PaymentSlider'
 import Visualize from 'components/tradeoffs/Visualize'
 import NumberFormat from 'react-number-format'
+
+import {
+  selectors as calculations_selectors,
+  actions as calculations_actions,
+} from 'redux/modules/calculations'
+
+export const selectors = grep_matching_from_object({
+  home_payment: calculations_selectors,
+  max_home_payment: calculations_selectors,
+  home_price: calculations_selectors,
+})
+
+export const actions = grep_matching_from_object({
+  set_home_payment: calculations_actions,
+})
+
+const mapStateToProps = createStructuredSelector(selectors)
 
 const Amount = (value) => (
   <NumberFormat
@@ -21,11 +41,14 @@ export class Results extends React.PureComponent {
   static propTypes = {
     onNext: PropTypes.func.isRequired,
 
-    home_price: PropTypes.number.isRequired,
+    // from Redux
     home_payment: PropTypes.number.isRequired,
+    max_home_payment: PropTypes.number.isRequired,
+    home_price: PropTypes.number.isRequired,
+
     lifestyle_value: PropTypes.number.isRequired,
 
-    onPaymentChange: PropTypes.func.isRequired,
+    set_home_payment: PropTypes.func.isRequired,
   };
   static defaultProps = {
     lifestyle_value: 0,
@@ -47,11 +70,12 @@ export class Results extends React.PureComponent {
         </Explaination>
         <PaymentSlider
           value={this.props.home_payment}
-          onChange={this.props.onPaymentChange}
+          max={this.props.max_home_payment}
+          onChange={this.props.set_home_payment}
         />
         <Visualize />
       </Shell>
     )
   }
 }
-export default Results
+export default connect(mapStateToProps, actions)(Results)

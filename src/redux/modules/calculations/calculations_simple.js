@@ -10,10 +10,10 @@ import {
 // --------
 
 const initial_state = {
-  net_income: 0,
-  debt_payments: 0,
-  rent_payments: 0,
-  home_payment: 0,
+  net_income: 5000,
+  debt_payments: 500,
+  rent_payment: 1500,
+  home_payment: 1500,
 }
 
 const rates = {
@@ -57,28 +57,29 @@ const max_home_ratio = createSelector(
   gross_income,
   simple_selectors.debt_payments,
   (gross, other_debts) => {
-    const debt_rate = other_debts / gross_income
+    const debt_rate = other_debts / gross
     return Math.min(rates.max_home_ratio, rates.max_total_debt - debt_rate)
   }
 )
 const max_home_payment = createSelector(
   gross_income,
   max_home_ratio,
-  (gross, max_rate) => gross * max_home_ratio
+  (gross, max_rate) => gross * max_rate
 )
 
 const months = 12
 const NPer = 30 * months // eslint-disable-line
+const house_precition = 1000
 
 const home_price = createSelector(
   simple_selectors.home_payment,
   (total) => {
     // solved using https://www.symbolab.com
     const extra = (rates.pmi + rates.property_tax + rates.property_insurance) / months
-    const r = rates.mortgage_rate
+    const r = rates.mortgage_rate / months
     const one_r = Math.pow((1 + r), -NPer)
-    const price = (total - (total * one_r)) / (extra - (extra * one_r) + rates.mortgage_rate)
-    return Math.rount(price)
+    const price = (total - (total * one_r)) / (extra - (extra * one_r) + r)
+    return Math.floor(price / house_precition) * house_precition
   }
 )
 
@@ -96,7 +97,13 @@ const action_types_prefix = 'calculations/'
 const public_handlers = {
   set_net_income: (state, {payload: net_income}) => state.merge({net_income}),
   set_debt_payments: (state, {payload: debt_payments}) => state.merge({debt_payments}),
-  set_rent_payments: (state, {payload: rent_payments}) => state.merge({rent_payments}),
+  set_rent_payments: (state, {payload: rent_payment}) => {
+    state = state.merge({rent_payment})
+
+    const default_payment = Math.min(max_home_payment(state), rent_payment)
+
+    return state.merge({home_payment: default_payment})
+  },
   set_home_payment: (state, {payload: home_payment}) => state.merge({home_payment}),
 }
 
