@@ -1,0 +1,24 @@
+@import '~styles/base';
+
+.increase {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  color: #FEFEFE;
+}
+
+.decrease {
+  @extend .increase;
+
+  color: red;
+}
+
+.place {
+  width: 50%;
+
+  svg {
+    width: 70%;
+    margin: 15%;
+  }
+}

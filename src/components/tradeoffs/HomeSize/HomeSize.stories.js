@@ -8,16 +8,15 @@ import * as knobs from '@storybook/addon-knobs'
 // import faker from 'faker'
 // import dayjs from 'dayjs'
 
-import { Visualize } from './Visualize'
+import { HomeSize } from './HomeSize'
 
 storiesOf('Tradeoffs', module)
   .addDecorator(knobs.withKnobs)
-  .add('Visualize', () => {
+  .add('HomeSize', () => {
     return (
-      <div style={{backgroundColor: 'black', color: 'white'}}>
-        <Visualize
-          home_price={knobs.number('home_price', 100000, {range: true, min: 100000, max: 10000000, step: 100000})}
-          lifestyle_value={knobs.number('home_price', 0, {range: true, min: -2000, max: 2000, step: 100})}
+      <div style={{backgroundColor: 'black'}}>
+        <HomeSize
+          size={knobs.number('size', 2, {range: true, min: 0, max: 3})}
         />
       </div>
     )

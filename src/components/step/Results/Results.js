@@ -74,7 +74,10 @@ export class Results extends React.PureComponent {
           max={this.props.max_home_payment}
           onChange={this.props.set_home_payment}
         />
-        <Visualize />
+        <Visualize
+          home_price={this.props.home_price}
+          lifestyle_value={this.props.lifestyle_value}
+        />
       </Shell>
     )
   }

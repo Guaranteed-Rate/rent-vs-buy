@@ -5,6 +5,8 @@ import { createStructuredSelector } from 'reselect'
 import { grep_matching_from_object } from 'helpers/redux_helpers'
 
 import './Visualize.scss'
+import HomeSize from '../HomeSize'
+import LifestyleSize from '../LifestyleSize'
 
 export const selectors = grep_matching_from_object({
 })
@@ -19,14 +21,19 @@ export class Visualize extends React.PureComponent {
     className: PropTypes.string,
 
     // from redux
-
+    home_price: PropTypes.number.isRequired,
+    lifestyle_value: PropTypes.number.isRequired,
   };
   static defaultProps = {
   };
 
   render () {
     return (
-      <div>Visualize</div>
+      <div styleName='root'>
+        <HomeSize styleName='images' size={2} />
+        <div styleName='vs'>VS.</div>
+        <LifestyleSize styleName='images' size={4} />
+      </div>
     )
   }
 }
