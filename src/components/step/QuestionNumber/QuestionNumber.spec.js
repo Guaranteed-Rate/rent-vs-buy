@@ -5,13 +5,13 @@ import {
 // import _ from 'lodash'
 
 import {
-  NetIncome,
-} from './NetIncome'
+  QuestionNumber,
+} from './QuestionNumber'
 
-// import stylesClass from './NetIncome.scss'
+// import stylesClass from './QuestionNumber.scss'
 // const styles = _.mapValues(stylesClass, (raw) => '.' + raw)
 
-export const NetIncome_specs = describe('<NetIncome />', () => {
+export const QuestionNumber_specs = describe('<QuestionNumber />', () => {
   let sandbox
   let props
 
@@ -30,7 +30,7 @@ export const NetIncome_specs = describe('<NetIncome />', () => {
 
   describe('general', () => {
     it('with normal props it should render without errors', () => {
-      const wrapper = shallow(<NetIncome {...props} />)
+      const wrapper = shallow(<QuestionNumber {...props} />)
       expect(wrapper).to.exist
     })
   })
