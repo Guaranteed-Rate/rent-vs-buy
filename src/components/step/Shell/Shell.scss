@@ -10,7 +10,9 @@
 }
 
 .title {
-  // something
+	// color: #FFFFFF;
+	// font-family: "Chronica Pro";
+	// font-size: 18px;
 }
 
 .spacer {
@@ -18,5 +20,17 @@
 }
 
 .button {
-  border-radius: 1rem;
+  background-color: #FFFFFF;
+  height: 44px;
+  width: 180px;
+  border-radius:22px;
+  cursor:pointer;
+  color: #0C3269;
+  font-family: "Chronica Pro";
+  font-size:18px;
+  font-weight: 500;
+  letter-spacing: -0.44px;
+  line-height: 23px;
+  letter-spacing: -0.44px;
+  text-align: center;
 }
