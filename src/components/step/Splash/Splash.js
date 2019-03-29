@@ -32,13 +32,13 @@ export class Splash extends React.PureComponent {
         next_text="Let's Get Started"
       >
         <Explaination>
-          <h1>Rent Vs. Buy<br /><em>Simplified!</em></h1>
-          <p>
+          <h1 styleName='h1'>Rent Vs. Buy<br/><em>Simplified!</em></h1>
+          <p styleName='p'>
             Answer a few easy questions about your current financial situation,
             get personalized tips and decide what’s better for you.
           </p>
         </Explaination>
-        <div>Powered By</div>
+        <div styleName='powered-by'>Powered By</div>
       </Shell>
     )
   }

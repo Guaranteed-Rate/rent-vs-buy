@@ -4,29 +4,39 @@
     font-family: "Chronica Pro";
 
   h1 {
-    	height: 84px;
-    	width: 239px;
-    	font-size: 38px;
-    	font-weight: bold;
-      font-style: normal;
+    position: absolute;
+    height: 84px;
+    width: 239px;
+    font-size: 38px;
+    font-weight: bold;
+    font-style: normal;
+    color:white;
+    left:20px;
+    top:86px;
 
-    em {
-      font-weight: bold;
-      
-    }
+  em {
+      font-weight: bold; 
+  }
   }
 
   p {
-    	font-family: "Chronica Pro";
-      font-size: 22px;
-      font-weight: normal;
-      font-style:normal;
-      letter-spacing: -0.53px;
-      line-height: 28px;
-      text-align: left;
+  width: 326px;
+  height: 116px;
+  position: absolute;
+  left:20px;
+  top:180px;
+  color:white;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 22px;
+  font-family: "Chronica Pro";
+  letter-spacing: -0.53px;
+  text-align: left;
+  line-height: 28px;
+  letter-spacing: -0.53px;
 
-    em {
+  em {
       font-weight: bold;
-    }
+  }
   }
 }

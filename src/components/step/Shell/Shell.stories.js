@@ -18,7 +18,7 @@ storiesOf('Step', module)
         next_text={knobs.text('next_text', 'Next')}
         onNext={action('onNext')}
       >
-        <div>Body</div>
+        <div> BLorem ipsum dolor sit amet, rinamcorper ts.Fusce semper risus eu metus accumsan congue.Sed eget dolor a nunc feugiat dictum eget ac lacus.Pellentesque placerats facilisis magna turpis et lorem.Integer ipsum urna, pretium id accumsan a, ornare nec ligula.Nunc molestie consectetur tincidunt.Morbi euismod dui at consectetur auctor.Cras vestibulum sapien et eros accumsan, eget sollicitudin sem sodales.Aliquam pretium ornare neque eget aliquam.Morbi mauris urna, pulvinar sit amet volutpat et, laoreet nec arcu.Cras consequat ipsum urna, in placerat orci pulvinar ut.Morbi in eros ac ligula feugiat viverra.Vestibulum ornare sit amet libero eget feugiat. </div>
       </Shell>
     )
   })

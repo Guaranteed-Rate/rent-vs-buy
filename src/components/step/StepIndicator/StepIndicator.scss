@@ -4,6 +4,7 @@
   display: flex;
   position: absolute;
   bottom: 30px;
+  justify-content: flex-end;
 }
 
 .indicator {
@@ -12,8 +13,6 @@
   width: $size;
   border-radius: 50%;
   background-color: white;
-  align-content: center;
-  justify-content: center;
 }
 
 .current {
