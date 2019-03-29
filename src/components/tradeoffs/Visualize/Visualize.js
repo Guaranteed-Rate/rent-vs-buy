@@ -26,7 +26,7 @@ export class Visualize extends React.PureComponent {
 
   render () {
     return (
-      <div>loading...</div>
+      <div>Visualize</div>
     )
   }
 }
