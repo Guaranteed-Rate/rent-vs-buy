@@ -6,7 +6,13 @@ import { grep_matching_from_object } from 'helpers/redux_helpers'
 
 import './StepIndicator.scss'
 
+import {
+  selectors as steps_selectors,
+} from 'redux/modules/steps'
+
 export const selectors = grep_matching_from_object({
+  current_index: steps_selectors,
+  total: steps_selectors,
 })
 
 export const actions = grep_matching_from_object({
@@ -20,13 +26,13 @@ export class StepIndicator extends React.PureComponent {
 
     // from redux
     total: PropTypes.number.isRequired,
-    current: PropTypes.number.isRequired,
+    current_index: PropTypes.number.isRequired,
   };
   static defaultProps = {
   };
 
   render_indicator = (value, index) => {
-    return <div key={index} styleName='indicator' />
+    return <div key={index} styleName={'indicator' + (this.props.current_index === index ? ' current' : '')} />
   }
 
   render () {

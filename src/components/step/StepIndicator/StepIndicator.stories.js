@@ -16,7 +16,7 @@ storiesOf('Step', module)
     return (
       <StepIndicator
         total={knobs.number('total', 4)}
-        current={knobs.number('current', 1)}
+        current_index={knobs.number('current_index', 1)}
       />
     )
   })
