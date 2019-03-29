@@ -22,7 +22,7 @@ storiesOf('Step', module)
         discription={knobs.text('discription', 'Enter your montly household earnings.')}
         prompt={knobs.text('prompt', 'total amount')}
 
-        value={knobs.number('value', '1225')}
+        value={knobs.number('value', 1225)}
         onValueChange={action('onValueChange')}
       />
     )
