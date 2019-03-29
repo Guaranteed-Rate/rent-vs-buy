@@ -21,13 +21,14 @@ export class Results extends React.PureComponent {
   static propTypes = {
     onNext: PropTypes.func.isRequired,
 
-    house_value: PropTypes.number.isRequired,
-    payment_value: PropTypes.number.isRequired,
+    home_price: PropTypes.number.isRequired,
+    home_payment: PropTypes.number.isRequired,
     lifestyle_value: PropTypes.number.isRequired,
 
     onPaymentChange: PropTypes.func.isRequired,
   };
   static defaultProps = {
+    lifestyle_value: 0,
   };
 
   render () {
@@ -39,13 +40,13 @@ export class Results extends React.PureComponent {
         <Explaination>
           <h1>Your Results</h1>
           <p>
-            You can afford a <em>{Amount(this.props.house_value)}</em> home of you own with a monthly
-            payment of <em>{Amount(this.props.payment_value)}</em> with a
+            You can afford a <em>{Amount(this.props.home_price)}</em> home of you own with a monthly
+            payment of <em>{Amount(this.props.home_payment)}</em> with a
             &nbsp;<em>{Amount(this.props.lifestyle_value)}</em> lifestyle.
           </p>
         </Explaination>
         <PaymentSlider
-          value={this.props.payment_value}
+          value={this.props.home_payment}
           onChange={this.props.onPaymentChange}
         />
         <Visualize />

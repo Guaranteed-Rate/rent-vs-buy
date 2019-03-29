@@ -15,8 +15,8 @@ storiesOf('Step', module)
   .add('Results', () => {
     return (
       <Results
-        house_value={knobs.number('house_value', 240000)}
-        payment_value={knobs.number('payment_value', 2000)}
+        home_price={knobs.number('home_price', 240000)}
+        home_payment={knobs.number('home_payment', 2000)}
         lifestyle_value={knobs.number('lifestyle_value', -700)}
 
         onNext={action('onNext')}
