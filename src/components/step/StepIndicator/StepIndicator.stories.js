@@ -8,14 +8,15 @@ import * as knobs from '@storybook/addon-knobs'
 // import faker from 'faker'
 // import dayjs from 'dayjs'
 
-import { NetIncome } from './NetIncome'
+import { StepIndicator } from './StepIndicator'
 
 storiesOf('Step', module)
   .addDecorator(knobs.withKnobs)
-  .add('NetIncome', () => {
+  .add('StepIndicator', () => {
     return (
-      <NetIncome
-        text={knobs.text('text', '')}
+      <StepIndicator
+        total={knobs.number('total', 4)}
+        current={knobs.number('current', 1)}
       />
     )
   })

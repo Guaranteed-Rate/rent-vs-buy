@@ -7,6 +7,7 @@ import NumberFormat from 'react-number-format'
 export class InputNumber extends React.PureComponent {
   static propTypes = {
     className: PropTypes.string,
+    prompt: PropTypes.string.isRequired,
 
     value: PropTypes.number.isRequired,
     onValueChange: PropTypes.func.isRequired,
@@ -16,13 +17,16 @@ export class InputNumber extends React.PureComponent {
 
   render () {
     return (
-      <NumberFormat
-        value={this.props.value}
-        onValueChange={this.props.onValueChange}
-        thousandSeparator
-        prefix={'$'}
-        allowNegative={false}
-      />
+      <div styleName='root'>
+        <div styleName='prompt'>{this.props.prompt}</div>
+        <NumberFormat
+          value={this.props.value}
+          onValueChange={this.props.onValueChange}
+          thousandSeparator
+          prefix={'$'}
+          allowNegative={false}
+        />
+      </div>
     )
   }
 }

@@ -1,20 +1,26 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import './NetIncome.scss'
+// import './QuestionNumber.scss'
 import Shell from '../Shell'
 import Explaination from 'components/conversation/Explaination'
 import InputNumber from 'components/questions/InputNumber'
 
-export class NetIncome extends React.PureComponent {
+export class QuestionNumber extends React.PureComponent {
   static propTypes = {
     onNext: PropTypes.func.isRequired,
     next_text: PropTypes.string.isRequired,
+
+    title: PropTypes.string.isRequired,
+    discription: PropTypes.string.isRequired,
+    prompt: PropTypes.string.isRequired,
 
     value: PropTypes.number.isRequired,
     onValueChange: PropTypes.func.isRequired,
   };
   static defaultProps = {
+    next_text: 'next',
+    prompt: 'total amount',
   };
 
   render () {
@@ -24,12 +30,13 @@ export class NetIncome extends React.PureComponent {
         next_text={this.props.next_text}
       >
         <Explaination>
-          <h1>Net Income</h1>
+          <h1>{this.props.title}</h1>
           <p>
-            Enter your monthly household earnings. This can be multiple incomes if needed.
+            {this.props.discription}
           </p>
         </Explaination>
         <InputNumber
+          prompt='total amount'
           value={this.props.value}
           onValueChange={this.props.onValueChange}
         />
@@ -37,4 +44,4 @@ export class NetIncome extends React.PureComponent {
     )
   }
 }
-export default NetIncome
+export default QuestionNumber

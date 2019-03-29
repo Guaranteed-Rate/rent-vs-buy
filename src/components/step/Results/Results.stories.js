@@ -8,16 +8,19 @@ import { action } from '@storybook/addon-actions'
 // import faker from 'faker'
 // import dayjs from 'dayjs'
 
-import { InputNumber } from './InputNumber'
+import { Results } from './Results'
 
-storiesOf('Questions', module)
+storiesOf('Step', module)
   .addDecorator(knobs.withKnobs)
-  .add('InputNumber', () => {
+  .add('Results', () => {
     return (
-      <InputNumber
-        prompt={knobs.text('prompt', 'total amount')}
-        value={knobs.number('value', '1225')}
-        onValueChange={action('onValueChange')}
+      <Results
+        house_value={knobs.number('house_value', 240000)}
+        payment_value={knobs.number('payment_value', 2000)}
+        lifestyle_value={knobs.number('lifestyle_value', -700)}
+
+        onNext={action('onNext')}
+        onPaymentChange={action('onPaymentChange')}
       />
     )
   })

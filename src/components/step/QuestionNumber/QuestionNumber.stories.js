@@ -8,15 +8,21 @@ import { action } from '@storybook/addon-actions'
 // import faker from 'faker'
 // import dayjs from 'dayjs'
 
-import { InputNumber } from './InputNumber'
+import { QuestionNumber } from './QuestionNumber'
 
-storiesOf('Questions', module)
+storiesOf('Step', module)
   .addDecorator(knobs.withKnobs)
-  .add('InputNumber', () => {
+  .add('QuestionNumber', () => {
     return (
-      <InputNumber
+      <QuestionNumber
+        onNext={action('onNext')}
+        next_text={knobs.text('next_text', 'Next')}
+
+        title={knobs.text('title', 'Net Income')}
+        discription={knobs.text('discription', 'Enter your montly household earnings.')}
         prompt={knobs.text('prompt', 'total amount')}
-        value={knobs.number('value', '1225')}
+
+        value={knobs.number('value', 1225)}
         onValueChange={action('onValueChange')}
       />
     )

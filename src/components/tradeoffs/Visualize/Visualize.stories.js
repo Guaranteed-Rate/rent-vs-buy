@@ -3,21 +3,20 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import * as knobs from '@storybook/addon-knobs'
-import { action } from '@storybook/addon-actions'
+// import { action } from '@storybook/addon-actions'
 // import _ from 'lodash'
 // import faker from 'faker'
 // import dayjs from 'dayjs'
 
-import { InputNumber } from './InputNumber'
+import { Visualize } from './Visualize'
 
-storiesOf('Questions', module)
+storiesOf('Tradeoffs', module)
   .addDecorator(knobs.withKnobs)
-  .add('InputNumber', () => {
+  .add('Visualize', () => {
     return (
-      <InputNumber
-        prompt={knobs.text('prompt', 'total amount')}
-        value={knobs.number('value', '1225')}
-        onValueChange={action('onValueChange')}
+      <Visualize
+        home_size={knobs.number('home_size', 0.5, {range: true, min: 0, max: 1, step: 0.1})}
+        lifestyle_size={knobs.number('lifestyle_size', 100)}
       />
     )
   })

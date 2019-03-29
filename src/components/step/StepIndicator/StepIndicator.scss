@@ -1,0 +1,13 @@
+@import '~styles/base';
+
+.root {
+  display: flex;
+}
+
+.indicator {
+  $size: 10px;
+  height: $size;
+  width: $size;
+  border-radius: 50%;
+  background-color: black;
+}
