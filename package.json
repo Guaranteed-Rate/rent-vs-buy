@@ -100,7 +100,8 @@
     "redux-thunk": "^2.1.0",
     "redux_helpers": "https://github.com/CurtisHumphrey/redux_helpers.git",
     "reselect": "^4.0.0",
-    "seamless-immutable": "^7.1.2"
+    "seamless-immutable": "^7.1.2",
+    "yarn": "^1.15.2"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^5.0.5",
