@@ -38,7 +38,7 @@ export class Splash extends React.PureComponent {
             get personalized tips and decide what’s better for you.
           </p>
         </Explaination>
-        <div styleName='powered-by'>Powered By</div>
+        <div styleName='logo' />
       </Shell>
     )
   }

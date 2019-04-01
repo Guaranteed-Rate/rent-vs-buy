@@ -1,10 +1,12 @@
 @import '~styles/base';
 
 .root {
-    font-family: "Chronica Pro";
+  $font-family: "Chronica Pro";
+  display:flex;
+  flex-direction: column;
 
   h1 {
-    position: absolute;
+    position: relative;
     height: 84px;
     width: 239px;
     font-size: 38px;
@@ -20,20 +22,18 @@
   }
 
   p {
-  width: 326px;
-  height: 116px;
-  position: absolute;
-  left:20px;
-  top:180px;
-  color:white;
   font-weight: normal;
+  letter-spacing: -0.53px;
+  position: relative;
+  left:20px;
+  height: 116px;
+  width: 326px;  
+  top: 110px;
+  color:white;
   font-style: normal;
   font-size: 22px;
-  font-family: "Chronica Pro";
-  letter-spacing: -0.53px;
   text-align: left;
   line-height: 28px;
-  letter-spacing: -0.53px;
 
   em {
       font-weight: bold;
