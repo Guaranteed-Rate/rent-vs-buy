@@ -40,6 +40,7 @@ const Amount = (value) => (
 
 export class Results extends React.PureComponent {
   static propTypes = {
+    backgroundImage: PropTypes.string,
     onNext: PropTypes.func.isRequired,
 
     // from Redux
@@ -60,6 +61,7 @@ export class Results extends React.PureComponent {
       <Shell
         onNext={this.props.onNext}
         next_text='Take the Next Step'
+        backgroundImage={this.props.backgroundImage}
       >
         <Explaination>
           <h1 styleName='h1'>Your Results</h1>

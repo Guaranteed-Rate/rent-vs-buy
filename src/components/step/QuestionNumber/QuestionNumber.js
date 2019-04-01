@@ -8,6 +8,8 @@ import InputNumber from 'components/questions/InputNumber'
 
 export class QuestionNumber extends React.PureComponent {
   static propTypes = {
+    backgroundImage: PropTypes.string,
+
     onNext: PropTypes.func.isRequired,
     next_text: PropTypes.string.isRequired,
 
@@ -28,6 +30,7 @@ export class QuestionNumber extends React.PureComponent {
       <Shell
         onNext={this.props.onNext}
         next_text={this.props.next_text}
+        backgroundImage={this.props.backgroundImage}
       >
         <Explaination styleName='text'>
           <h1>{this.props.title}</h1>

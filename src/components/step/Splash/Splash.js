@@ -18,6 +18,8 @@ const mapStateToProps = createStructuredSelector(selectors)
 
 export class Splash extends React.PureComponent {
   static propTypes = {
+    backgroundImage: PropTypes.string,
+
     onNext: PropTypes.func.isRequired,
 
     // from redux
@@ -30,10 +32,11 @@ export class Splash extends React.PureComponent {
       <Shell
         onNext={this.props.onNext}
         next_text="Let's Get Started"
+        backgroundImage={this.props.backgroundImage}
       >
         <Explaination>
           <h1 styleName='h1'>Rent Vs. Buy<br /><em>Simplified!</em></h1>
-          <p styleName='p'>
+          <p>
             Answer a few easy questions about your current financial situation,
             get personalized tips and decide what’s better for you.
           </p>

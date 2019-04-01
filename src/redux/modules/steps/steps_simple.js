@@ -14,27 +14,32 @@ const initial_state = {
   steps: [
     {
       type: 'splash',
+      backgroundImage: require('images/BG1.jpg'),
     },
     {
       type: 'question',
       title: 'Net Income',
       discription: 'Enter your monthly household earnings. This can be multiple incomes if needed.',
       value_name: 'net_income',
+      backgroundImage: require('images/BG2.jpg'),
     },
     {
       type: 'question',
       title: 'Debt Payments',
       discription: 'Enter your monthly debt payments. This includes car payment, credit cards any student loans. Do not include utilities.', // eslint-disable-line
       value_name: 'debt_payments',
+      backgroundImage: require('images/BG3.png'),
     },
     {
       type: 'question',
       title: 'Rent Amount',
       discription: 'Enter your monthly rental payment for your current place.',
       value_name: 'rent_payment',
+      backgroundImage: require('images/BG4.png'),
     },
     {
       type: 'results',
+      backgroundImage: require('images/BG6.png'),
     },
   ],
 }

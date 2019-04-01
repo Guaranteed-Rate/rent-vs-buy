@@ -8,6 +8,8 @@ export class Shell extends React.PureComponent {
   static propTypes = {
     className: PropTypes.string,
 
+    backgroundImage: PropTypes.string,
+
     next_text: PropTypes.string.isRequired,
     onNext: PropTypes.func.isRequired,
     hide_indicator: PropTypes.bool,
@@ -20,7 +22,7 @@ export class Shell extends React.PureComponent {
 
   render () {
     return (
-      <div styleName='root'>
+      <div styleName='root' style={{backgroundImage: `url(${this.props.backgroundImage})`}} >
         <div styleName='title'>Lifestyle Calculator</div>
         {this.props.children}
         <div styleName='spacer' />
