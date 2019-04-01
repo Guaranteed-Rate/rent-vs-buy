@@ -1,9 +1,8 @@
 const debug = require('debug')('app:webpack:cdn_and_externals')
 const {__PROD__} = require('./globals')
 
-const REACT_VERSION = '16.7.0'
+const REACT_VERSION = '16.8.6'
 const LODASH_VERSION = '4.17.11'
-const FIREBASE_VERSION = '5.7.2'
 
 debug(`Adding Lodash ${LODASH_VERSION} from cdn`)
 
@@ -48,23 +47,6 @@ if (__PROD__) {
   cdn_js.push(
     `https://unpkg.com/react@${REACT_VERSION}/umd/react.production.min.js`,
     `https://unpkg.com/react-dom@${REACT_VERSION}/umd/react-dom.production.min.js`,
-  )
-}
-if (__PROD__) {
-  debug(`Adding firebase ${FIREBASE_VERSION} for production or stage`)
-
-  externals.firebase = 'firebase'
-  externals['firebase/app'] = 'firebase'
-  externals['firebase/auth'] = 'firebase'
-  externals['firebase/database'] = 'firebase'
-
-  cdn_js.push(
-    `https://unpkg.com/react@${REACT_VERSION}/umd/react.production.min.js`,
-    `https://unpkg.com/react-dom@${REACT_VERSION}/umd/react-dom.production.min.js`,
-    `/__/firebase/${FIREBASE_VERSION}/firebase-app.js`,
-    `/__/firebase/${FIREBASE_VERSION}/firebase-auth.js`,
-    `/__/firebase/${FIREBASE_VERSION}/firebase-database.js`,
-    '/__/firebase/init.js',
   )
 }
 
