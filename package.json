@@ -1,6 +1,6 @@
 {
   "name": "rent-vs-buy",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "license": "none",
   "repository": "github:Guaranteed-Rate/rent-vs-buy",
@@ -24,7 +24,7 @@
     "tdd": "npm-run-all --parallel test:watch view-coverage",
     "view-coverage": "browser-sync start -s \"coverage/html\" -f \"coverage/html\" --port 3001 --no-ui --no-open --logLevel silent",
     "compile": "better-npm-run compile",
-    "deploy": "npm run lint && npm run lint:scss && npm run test && standard-version && npm run compile",
+    "deploy": "standard-version && npm run compile && storybook:deploy && aws s3 sync dist s3://rent-vs-buy.gr-stage.com",
     "storybook": "start-storybook -p 6006",
     "storybook:deploy": "better-npm-run storybook:deploy",
     "build-storybook": "build-storybook"
@@ -38,7 +38,7 @@
       }
     },
     "storybook:deploy": {
-      "command": "rimraf ../html/storybook && build-storybook -c .storybook -o ../html/storybook",
+      "command": "rimraf ../dist/storybook && build-storybook -c .storybook -o ../dist/storybook",
       "env": {
         "STORYBOOK": true,
         "DEBUG": "app:*"
