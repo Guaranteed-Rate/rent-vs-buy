@@ -1,1 +1,14 @@
 @import '~styles/base';
+
+.root {
+    //test
+}
+.slider {
+    position: relative;
+    // align-self: flex-start;
+    left: 25px;
+    min-width: 335px;
+    border: 9px;
+    border-color: #0B254E;
+    margin-bottom: 20px;
+}

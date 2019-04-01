@@ -1,8 +1,12 @@
 @import '~styles/base';
 
 .root {
-  //todo
+    position: relative;
+    left: 100px;
+    min-width: 337px;
 }
 .prompt {
-  //todo
+  margin-bottom: 10px; 
+  font-family: "Chronica Pro";
+  color: white;
 }

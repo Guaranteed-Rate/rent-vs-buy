@@ -2,19 +2,21 @@
 
 .root {
   $font-family: "Chronica Pro";
-  display:flex;
+  display: flex;
   flex-direction: column;
+  height: 50%;
 
   h1 {
     position: relative;
-    height: 84px;
+    height: auto;
     width: 239px;
     font-size: 38px;
     font-weight: bold;
     font-style: normal;
     color:white;
-    left:20px;
-    top:86px;
+    left: 20px;
+    top: 60px;
+    padding: 10px 0 10px 0;
 
   em {
       font-weight: bold; 
@@ -26,9 +28,10 @@
   letter-spacing: -0.53px;
   position: relative;
   left:20px;
-  height: 116px;
+  height: auto;
   width: 326px;  
-  top: 110px;
+  margin-top: 25%;
+  //top: 110px;
   color:white;
   font-style: normal;
   font-size: 22px;

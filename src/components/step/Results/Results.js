@@ -69,6 +69,7 @@ export class Results extends React.PureComponent {
             &nbsp;<em>{Amount(this.props.lifestyle_value)}</em> lifestyle change.
           </p>
         </Explaination>
+        <p styleName='p2'>Adjust Monthly Home Budget</p>
         <PaymentSlider
           value={this.props.home_payment}
           max={this.props.max_home_payment}

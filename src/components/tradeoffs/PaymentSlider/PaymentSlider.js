@@ -21,7 +21,7 @@ export class PaymentSlider extends React.PureComponent {
 
   render () {
     return (
-      <Slider
+      <Slider styleName='slider'
         axis='x'
         xmin={this.props.min}
         xmax={this.props.max}

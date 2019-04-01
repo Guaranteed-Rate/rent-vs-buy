@@ -36,7 +36,7 @@ export class QuestionNumber extends React.PureComponent {
           </p>
         </Explaination>
         <InputNumber
-          prompt='total amount'
+          prompt='Total Amount'
           value={this.props.value}
           onValueChange={this.props.onValueChange}
         />

@@ -20,43 +20,14 @@ body {
 .p  {
     position: relative;
     display: flex;
-    // line-height: 28px;
     margin-top: 10px;
-    // font-weight: 100;
-    // width: 326px;
-    // height: 116px;
-    // height: 116px;
-    // width: 326px;
-    // color: #FFFFFF;
-    //font-family: "Chronica Pro";
-    // font-size: 22px;
-    // letter-spacing: -0.53px;
 }
-
-// .powered-by{
-//     // display:flex;
-//     position: relative;
-//     top: 360px;
-//     left: 20px;
-//     text-transform: capitalize;
-//     font-weight: bold;
-//     line-height: 13px;
-//     font-style: normal;
-//     // left:20px;
-//     height: 13px;
-//     width: 71px;
-//     color: #FFFFFF;
-//     font-family: "Chronica Pro";
-//     font-size: 10px;
-//     font-weight: bold;
-//     line-height: 13px;
-// }
 
 .logo {
     // display: flexbox;
     background: url('../../../images/logo.svg') no-repeat;
     position: relative;
-    top: 210px;
+    margin-top: 200px;
     left: 20px;
     //background: url('/src/images/logo.svg');
     width: 100%;
