@@ -2,7 +2,7 @@
 import React from 'react'
 
 const SvgFood = props => (
-  <svg width={47} height={44} {...props}>
+  <svg width={47} height={44} viewBox='0 0 47 44' {...props}>
     <defs>
       <path id='food_svg__a' d='M0 0H46.12v43.675H0z' />
     </defs>

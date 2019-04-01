@@ -2,7 +2,7 @@
 import React from 'react'
 
 const SvgVacation = props => (
-  <svg width={38} height={42} {...props}>
+  <svg width={38} height={42} viewBox='0 0 38 42' {...props}>
     <defs>
       <path id='vacation_svg__a' d='M0 0h37.483v41.493H0z' />
     </defs>

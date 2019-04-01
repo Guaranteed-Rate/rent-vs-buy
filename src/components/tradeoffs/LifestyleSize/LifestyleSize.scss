@@ -1,6 +1,7 @@
 @import '~styles/base';
 
 .increase {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -16,9 +17,20 @@
 
 .place {
   width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   svg {
     width: 70%;
     margin: 10%;
   }
+}
+
+.same {
+  position: absolute;
+  top: 40%;
+  text-align: center;
+  width: 100%;
 }

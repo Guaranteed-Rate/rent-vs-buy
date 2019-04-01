@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-left: 10%;
+  margin: 0 10%;
 }
 
 .vs {
@@ -19,7 +19,12 @@
   margin: 5%;
 }
 
-.images {
-  // width: 100px;
-  // height: 100px;
+.house {
+  width: 100px;
+  height: 130px;
+}
+
+.life {
+  width: 100px;
+  height: 100px;
 }

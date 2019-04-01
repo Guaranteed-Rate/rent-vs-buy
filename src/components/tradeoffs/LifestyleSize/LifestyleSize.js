@@ -44,8 +44,9 @@ export class LifestyleSize extends React.PureComponent {
   render () { // eslint-disable-line
     const {size} = this.props
     return (
-      <div styleName={size < 0 ? 'decrease' : 'increase'}>
+      <div styleName={size < 0 ? 'decrease' : 'increase'} className={this.props.className} >
         {order_of_increase.map(this.render_style)}
+        {size === 0 && <div styleName='same'>Same</div>}
       </div>
     )
   }

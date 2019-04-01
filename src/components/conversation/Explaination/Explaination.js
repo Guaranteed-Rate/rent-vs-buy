@@ -14,7 +14,7 @@ export class Explaination extends React.PureComponent {
 
   render () {
     return (
-      <div styleName='root'>
+      <div styleName='root' className={this.props.className} >
         {this.props.children}
       </div>
     )

@@ -16,8 +16,8 @@ storiesOf('Tradeoffs', module)
     return (
       <div style={{backgroundColor: 'black', color: 'white'}}>
         <Visualize
-          home_price={knobs.number('home_price', 100000, {range: true, min: 100000, max: 10000000, step: 100000})}
-          lifestyle_value={knobs.number('home_price', 0, {range: true, min: -2000, max: 2000, step: 100})}
+          home_price={knobs.number('home_price', 100000, {range: true, min: 100000, max: 1000000, step: 10000})}
+          lifestyle_value={knobs.number('lifestyle_value', 0, {range: true, min: -2000, max: 2000, step: 100})}
         />
       </div>
     )

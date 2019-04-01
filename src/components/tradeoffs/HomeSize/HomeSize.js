@@ -16,11 +16,11 @@ export class HomeSize extends React.PureComponent {
   render () {
     const image = this.props.size + 1
     return (
-      <img
-        styleName='root'
-        className={this.props.className}
-        src={require(`./home${image}.svg`)}
-      />
+      <div styleName='root' className={this.props.className}>
+        <img
+          src={require(`./home${image}.svg`)}
+        />
+      </div>
     )
   }
 }

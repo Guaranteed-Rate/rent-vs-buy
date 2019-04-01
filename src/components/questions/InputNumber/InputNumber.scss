@@ -1,10 +1,15 @@
 @import '~styles/base';
 
 .root {
-    position: relative;
-    left: 100px;
-    min-width: 337px;
+  margin: 0 20px;
+
+  input {
+    font-size: 3rem;
+    padding: 1rem;
+    width: 100%;
+  }
 }
+
 .prompt {
   margin-bottom: 10px; 
   font-family: "Chronica Pro";

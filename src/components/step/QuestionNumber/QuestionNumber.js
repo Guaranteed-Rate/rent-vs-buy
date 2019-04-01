@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-// import './QuestionNumber.scss'
+import './QuestionNumber.scss'
 import Shell from '../Shell'
 import Explaination from 'components/conversation/Explaination'
 import InputNumber from 'components/questions/InputNumber'
@@ -29,7 +29,7 @@ export class QuestionNumber extends React.PureComponent {
         onNext={this.props.onNext}
         next_text={this.props.next_text}
       >
-        <Explaination>
+        <Explaination styleName='text'>
           <h1>{this.props.title}</h1>
           <p>
             {this.props.discription}

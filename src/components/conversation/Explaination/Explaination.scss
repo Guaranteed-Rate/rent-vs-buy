@@ -2,44 +2,33 @@
 
 .root {
   $font-family: "Chronica Pro";
-  display: flex;
-  flex-direction: column;
-  height: 50%;
+  margin: 0 20px;
 
   h1 {
-    position: relative;
-    height: auto;
-    width: 239px;
     font-size: 38px;
     font-weight: bold;
     font-style: normal;
     color:white;
-    left: 20px;
-    top: 60px;
+    
     padding: 10px 0 10px 0;
 
-  em {
+    em {
       font-weight: bold; 
-  }
+    }
   }
 
   p {
-  font-weight: normal;
-  letter-spacing: -0.53px;
-  position: relative;
-  left:20px;
-  height: auto;
-  width: 326px;  
-  margin-top: 25%;
-  //top: 110px;
-  color:white;
-  font-style: normal;
-  font-size: 22px;
-  text-align: left;
-  line-height: 28px;
+    font-weight: normal;
+    letter-spacing: -0.53px;
+    //top: 110px;
+    color: white;
+    font-style: normal;
+    font-size: 22px;
+    text-align: left;
+    line-height: 28px;
 
-  em {
+    em {
       font-weight: bold;
-  }
+    }
   }
 }

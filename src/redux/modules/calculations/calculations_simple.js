@@ -10,8 +10,8 @@ import {
 // --------
 
 const initial_state = {
-  net_income: 8000,
-  debt_payments: 500,
+  net_income: 5000,
+  debt_payments: 800,
   rent_payment: 1500,
   home_payment: 1500,
 }
