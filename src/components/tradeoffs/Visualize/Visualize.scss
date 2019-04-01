@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-left: 20px;
+  margin-left: 10%;
 }
 
 .vs {
@@ -14,8 +14,9 @@
   height: 40px;
   text-align: center;
   line-height: 40px;
+  min-width: 40px;
   color: white;
-  margin: 10px;
+  margin: 5%;
 }
 
 .images {
