@@ -24,7 +24,7 @@
     "tdd": "npm-run-all --parallel test:watch view-coverage",
     "view-coverage": "browser-sync start -s \"coverage/html\" -f \"coverage/html\" --port 3001 --no-ui --no-open --logLevel silent",
     "compile": "better-npm-run compile",
-    "deploy": "standard-version && npm run compile && storybook:deploy && aws s3 sync dist s3://rent-vs-buy.gr-stage.com",
+    "deploy": "standard-version && npm run compile && npm run storybook:deploy && aws s3 sync dist s3://rent-vs-buy.gr-stage.com",
     "storybook": "start-storybook -p 6006",
     "storybook:deploy": "better-npm-run storybook:deploy",
     "build-storybook": "build-storybook"

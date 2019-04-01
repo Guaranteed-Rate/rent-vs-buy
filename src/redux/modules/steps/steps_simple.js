@@ -28,18 +28,18 @@ const initial_state = {
       title: 'Debt Payments',
       discription: 'Enter your monthly debt payments. This includes car payment, credit cards any student loans. Do not include utilities.', // eslint-disable-line
       value_name: 'debt_payments',
-      backgroundImage: require('images/BG3.png'),
+      backgroundImage: require('images/BG3.jpg'),
     },
     {
       type: 'question',
       title: 'Rent Amount',
       discription: 'Enter your monthly rental payment for your current place.',
       value_name: 'rent_payment',
-      backgroundImage: require('images/BG4.png'),
+      backgroundImage: require('images/BG4.jpg'),
     },
     {
       type: 'results',
-      backgroundImage: require('images/BG6.png'),
+      backgroundImage: require('images/BG6.jpg'),
     },
   ],
 }

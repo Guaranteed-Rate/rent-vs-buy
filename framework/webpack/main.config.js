@@ -109,10 +109,10 @@ module.exports = {
     }),
   ]).concat(!__PROD__ ? [] : [
     // main site
-    new FaviconsWebpackPlugin({
-      logo: './src/images/icon.png',
-      title: 'memory',
-    }),
+    // new FaviconsWebpackPlugin({
+    //   logo: './src/images/icon.png',
+    //   title: 'memory',
+    // }),
     new UnusedWebpackPlugin({
       directories: [base_resolve('src')],
       exclude: [
